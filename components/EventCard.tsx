@@ -8,16 +8,20 @@ interface Props {
   location: string;
   date: string;
   time: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
-const EventCard = ({ title, image, slug, location, date, time }: Props) => {
+const EventCard = ({ title, image, slug, location, date, time, imageWidth, imageHeight }: Props) => {
+  const width = imageWidth ?? 410;
+  const height = imageHeight ?? 300;
   return (
     <Link href={`/events/${slug}`} id="event-card">
       <Image
         src={image}
         alt={title}
-        width={410}
-        height={300}
+        width={width}
+        height={height}
         className="poster"
       />
 
