@@ -6,8 +6,7 @@ import Image from "next/image";
 import BookEvent from "@/components/BookEvent";
 import EventCard from "@/components/EventCard";
 import {cacheLife} from "next/cache";
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+import getBaseUrl from "@/lib/getBaseUrl";
 
 const EventDetailItem = ({ icon, alt, label }: { icon: string; alt: string; label: string; }) => (
     <div className="flex-row-gap-2 items-center">
@@ -42,7 +41,8 @@ const EventDetails = async ({ params }: { params: Promise<string> }) => {
 
     let event;
     try {
-        const request = await fetch(`${BASE_URL}/api/events/${slug}`, {
+        const baseUrl = getBaseUrl();
+        const request = await fetch(`${baseUrl}/api/events/${slug}`, {
             next: { revalidate: 60 }
         });
 
