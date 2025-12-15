@@ -1,66 +1,69 @@
-export type Event = {
-  title: string;
+export type EventItem = {
   image: string;
-  location: string;
-  date: string;
-  time: string;
+  title: string;
   slug: string;
-  url: string;
+  location: string;
+  date: string; // e.g., "2025-11-07"
+  time: string; // e.g., "09:00 AM"
 };
 
-export const events: Event[] = [
+export const events: EventItem[] = [
   {
-    title: "React Summit 2025",
     image: "/images/event1.png",
-    location: "Amsterdam, NL",
-    date: "2025-06-13",
-    time: "09:00-17:00 CET",
-    slug: "react-summit-2025",
-    url: "https://reactsummit.com/",
+    title: "React Summit US 2025",
+    slug: "react-summit-us-2025",
+    location: "San Francisco, CA, USA",
+    date: "2025-11-07",
+    time: "09:00 AM",
   },
   {
-    title: "Next.js Conf",
     image: "/images/event2.png",
-    location: "San Francisco, USA",
-    date: "2025-10-15",
-    time: "10:00-18:00 PT",
-    slug: "nextjs-conf-2025",
-    url: "https://nextjs.org/conf",
+    title: "KubeCon + CloudNativeCon Europe 2026",
+    slug: "kubecon-cloudnativecon-eu-2026",
+    location: "Vienna, Austria",
+    date: "2026-03-18",
+    time: "10:00 AM",
   },
   {
-    title: "Google I/O Extended",
     image: "/images/event3.png",
-    location: "Online + Local Hubs",
-    date: "2025-05-14",
-    time: "09:30-16:30 PT",
-    slug: "google-io-extended-2025",
-    url: "https://io.google/2025/",
+    title: "AWS re:Invent 2025",
+    slug: "aws-reinvent-2025",
+    location: "Las Vegas, NV, USA",
+    date: "2025-12-01",
+    time: "08:30 AM",
   },
   {
-    title: "ETHGlobal Hackathon",
     image: "/images/event4.png",
-    location: "Singapore, SG",
-    date: "2025-08-09",
-    time: "48-hour hackathon",
-    slug: "ethglobal-hackathon-2025",
-    url: "https://ethglobal.com/events",
+    title: "Next.js Conf 2025",
+    slug: "nextjs-conf-2025",
+    location: "Los Angeles, CA, USA (Hybrid)",
+    date: "2025-11-12",
+    time: "09:30 AM",
   },
   {
-    title: "JSNation Live",
     image: "/images/event5.png",
-    location: "Online",
-    date: "2025-04-24",
-    time: "14:00-21:00 CET",
-    slug: "jsnation-live-2025",
-    url: "https://jsnation.com/",
+    title: "Google Cloud Next 2026",
+    slug: "google-cloud-next-2026",
+    location: "San Jose, CA, USA",
+    date: "2026-04-07",
+    time: "09:00 AM",
   },
   {
-    title: "HackMIT",
     image: "/images/event6.png",
-    location: "Cambridge, USA",
-    date: "2025-09-27",
-    time: "36-hour hackathon",
-    slug: "hackmit-2025",
-    url: "https://hackmit.org/",
+    title: "ETHGlobal Hackathon: Paris 2026",
+    slug: "ethglobal-paris-2026",
+    location: "Paris, France",
+    date: "2026-07-10",
+    time: "10:00 AM",
+  },
+  {
+    image: "/images/events-full.png",
+    title: "Open Source Summit North America 2026",
+    slug: "oss-na-2026",
+    location: "Vancouver, Canada",
+    date: "2026-06-22",
+    time: "09:00 AM",
   },
 ];
+
+export default events;
